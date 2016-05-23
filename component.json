@@ -34,6 +34,7 @@
     "query": {
       "title": "Query",
       "main": "./lib/actions/query.js",
+      "type": "polling",
       "fields": {
         "query": {
           "label": "Query",
