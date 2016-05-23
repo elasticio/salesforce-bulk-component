@@ -1,0 +1,13 @@
+{
+  "title": "Salesforce Bulk API",
+  "description": "Component that talks to Salesforce Bath API",
+  "credentials": {
+    "fields": {
+      "name": {
+        "label": "My API Key",
+        "required": true,
+        "viewClass": "TextFieldView"
+      }
+    }
+  }
+}
