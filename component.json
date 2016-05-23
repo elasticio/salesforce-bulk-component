@@ -1,13 +1,40 @@
 {
-  "title": "Salesforce Bulk API",
+  "title": "Salesforce Bulk",
   "description": "Component that talks to Salesforce Bath API",
+  "env": [
+    "SALESFORCE_KEY",
+    "SALESFORCE_SECRET"
+  ],
   "credentials": {
     "fields": {
-      "name": {
-        "label": "My API Key",
+      "prodEnv": {
+        "label": "Environment",
+        "viewClass": "SelectView",
         "required": true,
-        "viewClass": "TextFieldView"
+        "model": {
+          "test": "Sandbox",
+          "login": "Production"
+        },
+        "prompt": "Select environment"
+      },
+      "oauth": {
+        "label": "Authentication",
+        "viewClass": "OAuthFieldView",
+        "required": true
       }
+    },
+    "oauth2": {
+      "client_id": "{{SALESFORCE_KEY}}",
+      "client_secret": "{{SALESFORCE_SECRET}}",
+      "auth_uri": "https://{{prodEnv}}.salesforce.com/services/oauth2/authorize",
+      "token_uri": "https://{{prodEnv}}.salesforce.com/services/oauth2/token"
+    }
+  },
+  "actions": {
+    "query": {
+      "title": "Query",
+      "main": "./lib/actions/query.js",
+      "metadata": {}
     }
   }
 }
