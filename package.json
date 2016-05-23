@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "elasticio-node": "0.0.5",
-    "elasticio-sailor-nodejs": "1.1.2",
+    "elasticio-sailor-nodejs": "1.2.1",
     "jsforce": "^1.6.4",
     "q": "^1.4.1"
   },
