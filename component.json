@@ -30,10 +30,18 @@
       "token_uri": "https://{{prodEnv}}.salesforce.com/services/oauth2/token"
     }
   },
-  "actions": {
+  "triggers": {
     "query": {
       "title": "Query",
       "main": "./lib/actions/query.js",
+      "fields": {
+        "query": {
+          "label": "Query",
+          "required": true,
+          "viewClass": "TextAreaView",
+          "default": "SELECT Id, Name, NumberOfEmployees FROM Account"
+        }
+      },
       "metadata": {}
     }
   }
